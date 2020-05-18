@@ -3,8 +3,8 @@ kind: Deployment
 metadata:
   name: worker-app
   labels:
-    - app: example-voting-app-rohit
-      name: worker-app
+    app: example-voting-app-rohit
+    name: worker-app
 spec:
   replicas: 1
   template:
@@ -15,8 +15,8 @@ spec:
     metadata:
       name: worker-app
       labels:
-        - app: example-voting-app-rohit
-          name: worker-app
+        app: example-voting-app-rohit
+        name: worker-app
   selector:
     matchLabels:
       app: example-voting-app-rohit
