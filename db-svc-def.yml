@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: db-service
+  labels:
+    - app: example-voting-app-rohit
+      name: db-service
+spec:
+  type: ClusterIP
+  ports:
+    - port: 5432
+      targetPort: 5432
+      name: db-service
+  selector:
+    name: db
+    app: example-voting-app-rohit
