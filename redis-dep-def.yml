@@ -3,8 +3,8 @@ kind: Deployment
 metadata:
   name: redis
   labels:
-    - app: example-voting-app-rohit
-      name: redis
+    app: example-voting-app-rohit
+    name: redis
 spec:
   replicas: 1
   selector:
@@ -15,8 +15,8 @@ spec:
     metadata:
       name: redis
       labels:
-        - app: example-voting-app-rohit
-          name: redis
+        app: example-voting-app-rohit
+        name: redis
     spec:
       containers:
         - name: redis
